@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashboardContext" prefHeight="414.0" prefWidth="1056.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <Label layoutX="31.0" layoutY="36.0" prefHeight="71.0" prefWidth="282.0" text="Dash Borad">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Separator layoutX="320.0" layoutY="73.0" prefHeight="7.0" prefWidth="638.0" />
+      <JFXButton fx:id="btnStudent" buttonType="RAISED" layoutX="31.0" layoutY="185.0" onAction="#btnStudentOnAction" prefHeight="83.0" prefWidth="282.0" ripplerFill="WHITE" style="-fx-background-color: #16a085; -fx-background-radius: 15;" text="Student" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSubjects" buttonType="RAISED" layoutX="387.0" layoutY="185.0" onAction="#btnSubjectsOnAction" prefHeight="83.0" prefWidth="282.0" ripplerFill="WHITE" style="-fx-background-color: #2c3e50; -fx-background-radius: 15;" text="Subjects" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnStudentDetails" buttonType="RAISED" layoutX="738.0" layoutY="185.0" onAction="#btnStudentDetailsOnAction" prefHeight="83.0" prefWidth="282.0" ripplerFill="WHITE" style="-fx-background-color: #2980b9; -fx-background-radius: 15;" text="Student Details" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
