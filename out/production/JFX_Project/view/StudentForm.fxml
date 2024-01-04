@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="studentFormContext" prefHeight="741.0" prefWidth="1182.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
+   <children>
+      <JFXButton fx:id="btnHome" buttonType="RAISED" layoutX="22.0" layoutY="25.0" onAction="#btnHomeOnAction" prefHeight="44.0" prefWidth="96.0" ripplerFill="WHITE" style="-fx-background-color: #2c3e50;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="139.0" layoutY="14.0" prefHeight="66.0" prefWidth="289.0" text="Student Form" textFill="RED">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="425.0" layoutY="40.0" prefHeight="14.0" prefWidth="454.0" />
+      <JFXButton fx:id="btnAddStudent" buttonType="RAISED" layoutX="943.0" layoutY="25.0" onAction="#btnAddStudentOnAction" prefHeight="44.0" prefWidth="217.0" ripplerFill="WHITE" style="-fx-background-color: #16a085;" text="+ New Student" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="22.0" layoutY="161.0" prefHeight="39.0" prefWidth="236.0" promptText="Id">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="329.0" layoutY="161.0" prefHeight="39.0" prefWidth="464.0" promptText="Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="879.0" layoutY="161.0" prefHeight="39.0" prefWidth="281.0" promptText="Contact">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="21.0" layoutY="240.0" prefHeight="39.0" prefWidth="858.0" promptText="Address">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="994.0" layoutY="238.0" onAction="#btnSaveOnAction" prefHeight="44.0" prefWidth="166.0" ripplerFill="WHITE" style="-fx-background-color: #2980b9;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblContext" layoutX="18.0" layoutY="334.0" prefHeight="394.0" prefWidth="1141.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="133.99996948242188" text="Id" />
+          <TableColumn fx:id="colName" minWidth="0.0" prefWidth="252.0" text="Name" />
+            <TableColumn fx:id="colContact" minWidth="0.0" prefWidth="246.0" text="Contact" />
+            <TableColumn fx:id="colAddress" minWidth="0.0" prefWidth="250.0" text="Address" />
+            <TableColumn fx:id="colOperator" minWidth="0.0" prefWidth="258.0" text="Operator" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
