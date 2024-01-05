@@ -34,7 +34,7 @@ public class StudentFormController {
     public JFXTextField txtContact;
     public JFXTextField txtAddress;
     public JFXButton btnSave;
-    public TableView tblContext;
+    public TableView <StudentTM> tblContext;
     public TableColumn colId;
     public TableColumn colName;
     public TableColumn colContact;
@@ -143,8 +143,19 @@ public class StudentFormController {
                 }
             }
         }));
+
+        tblContext.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
+            loadStudentData(newValue);
+
+        }));
     }
 
+    public void loadStudentData(StudentTM tm){
+        txtId.setText(tm.getId());
+        txtName.setText(tm.getName());
+        txtContact.setText(tm.getContact());
+        txtAddress.setText(tm.getAddress());
+    }
 
     public void moveToNextNameOnAction(ActionEvent actionEvent) {
         txtName.requestFocus();
