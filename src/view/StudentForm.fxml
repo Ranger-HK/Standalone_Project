@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -34,17 +35,17 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="22.0" layoutY="161.0" prefHeight="39.0" prefWidth="236.0" promptText="Id">
+      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="22.0" layoutY="161.0" onAction="#moveToNextNameOnAction" prefHeight="39.0" prefWidth="236.0" promptText="Id">
          <font>
             <Font size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="329.0" layoutY="161.0" prefHeight="39.0" prefWidth="464.0" promptText="Name">
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="329.0" layoutY="161.0" onAction="#moveToNextContactOnAction" prefHeight="39.0" prefWidth="464.0" promptText="Name">
          <font>
             <Font size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="879.0" layoutY="161.0" prefHeight="39.0" prefWidth="281.0" promptText="Contact">
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="879.0" layoutY="161.0" onAction="#moveToNexAddressOnAction" prefHeight="39.0" prefWidth="281.0" promptText="Contact">
          <font>
             <Font size="18.0" />
          </font>
@@ -71,5 +72,10 @@
             <TableColumn fx:id="colOperator" minWidth="0.0" prefWidth="258.0" text="Operator" />
         </columns>
       </TableView>
+      <TextField fx:id="txtSearch" layoutX="18.0" layoutY="101.0" prefHeight="31.0" prefWidth="236.0" promptText="Search here">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>
