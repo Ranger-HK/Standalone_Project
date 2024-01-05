@@ -44,6 +44,7 @@ public class StudentFormController {
 
    static ArrayList<Student> studentArrayList = new ArrayList();
 
+
     public void btnHomeOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = getClass().getResource("../view/DashBoardForm.fxml");
         Parent load = FXMLLoader.load(resource);
@@ -145,16 +146,33 @@ public class StudentFormController {
         }));
 
         tblContext.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
-            loadStudentData(newValue);
+            if (newValue==null){
 
+            }else {
+                try {
+                    loadStudentData(newValue);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }));
     }
 
-    public void loadStudentData(StudentTM tm){
-        txtId.setText(tm.getId());
+    public void loadStudentData(StudentTM tm) throws IOException {
+       /* txtId.setText(tm.getId());
         txtName.setText(tm.getName());
         txtContact.setText(tm.getContact());
-        txtAddress.setText(tm.getAddress());
+        txtAddress.setText(tm.getAddress());*/
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/StudentDataForm.fxml"));
+        Parent parent = loader.load();
+        StudentDataFormController controller = loader.getController();
+        controller.setData(tm);
+        Scene scene = new Scene(parent);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+
     }
 
     public void moveToNextNameOnAction(ActionEvent actionEvent) {
